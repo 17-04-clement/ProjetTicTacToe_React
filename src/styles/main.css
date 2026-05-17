@@ -1,0 +1,172 @@
+/* ======= RESET DE BASE DU NAVIGATEUR ======= */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ======= STYLE GÉNÉRAL DU SITE ======= */
+html, body, #root {
+display: flex;
+    min-height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    color: white;
+    background-image: url(../background_page_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 8px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+main {
+	margin: 0px 30px;
+	border: 15px solid rgb(235, 70, 70);
+    border-radius: 40px;
+    flex: 1;
+}
+
+.headerGameTicTacToe {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+	border-radius: 30px;
+	color: black;
+}
+
+.footerTicTacToe {
+	margin: 30px 0px 0px 0px;
+	text-align: center;
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+	border-radius: 30px;
+	color:black;
+}
+
+.pFooter {
+	margin: 5px 10px 5px 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.game {
+    display: flex;
+    margin: 10px;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.board{
+	border: 5px solid #414040;
+	border-radius: 16px;
+}
+
+.board-row {
+	display: grid;
+	grid-template-columns: repeat(3, min(30vw, 100px));
+	justify-content: center;
+}
+
+.game-board{
+	margin: 20px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historyMoves{
+	margin: 20px;
+}
+
+.square {
+	height: 100px;
+	width: 100px;
+	line-height: 100px;
+	font-size: 80px;
+	font-weight: bold;
+	text-align: center;
+	border: 5px solid #414040;
+	background: #fff;
+}
+
+.status {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.listHistoryMoves {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	background: rgba(0, 0, 0, 0.15);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.list {
+	border: 5px solid rgba(141, 197, 235, 0.8);
+	border-radius: 16px;
+}
+
+.elementMoves {
+	padding: 16px 16px;
+	border-bottom: 3px solid rgba(141, 197, 235, 0.8);
+	border-right: 3px solid rgba(141, 197, 235, 0.8);
+	background: rgba(255, 255, 255, 0.08);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60px;
+}
+
+.elementMoves:nth-child(3n) {
+	border-right: none;
+}
+
+.elementMoves:nth-last-child(-n+3) {
+	border-bottom: none;
+}
+
+.elementMoves:hover {
+	background-color: rgba(141, 197, 235, 0.25);
+	transform: none;
+}
+
+.buttonMoves {
+	padding: 10px 25px;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	background-color: #2392db;
+	color: black;
+	cursor: pointer;
+}
+
+.restartButton {
+	display: block;
+	margin: 40px auto 20px auto;
+	background-color: #36ee46;
+	color: #111;
+	font-weight: 700;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.restartButton:hover {
+	background-color: #11fa09;
+}
