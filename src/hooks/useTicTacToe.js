@@ -3,6 +3,10 @@ import calculateWinner from "../utils/calculateWinner";
 
 export default function useTicTacToe() {
 
+    const [countXWins, setCountXWins] = useState(0);
+    const [countOWins, setCountOWins] = useState(0);
+    const [countDraws, setCountDraws] = useState(0);
+    const [gamePlayed, setGamePlayed] = useState(0);
     const [visible, setVisible] = useState(false);
     const [history, setHistory] = useState([Array(9).fill(null)]);
     const [currentMove, setCurrentMove] = useState(0);
@@ -26,6 +30,14 @@ export default function useTicTacToe() {
     useEffect(() => {
         if (winner || isDraw) {
             setVisible(true);
+            setGamePlayed(gamePlayed + 1);
+            if (winner === "X") {
+                setCountXWins(countXWins + 1);
+            } else if (winner === "O") {
+                setCountOWins(countOWins + 1);
+            } else {
+                setCountDraws(countDraws + 1);
+            }
         }
     }, [winner, isDraw]);
 
@@ -66,10 +78,14 @@ export default function useTicTacToe() {
         squares,
         xIsNext,
         winner,
-        play,
-        jumpTo,
         moves,
         visible,
         status,
+        gamePlayed,
+        countXWins,
+        countOWins,
+        countDraws,
+        play,
+        jumpTo,
     };
 }

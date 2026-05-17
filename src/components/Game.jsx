@@ -1,7 +1,8 @@
 import Board from "./Board";
-import useTicTacToe from "../hooks/useTicTacToe";
+import { useGame } from "../context/TicTacToeContext";
 
 export default function Game() {
+
     const {
         squares,
         xIsNext,
@@ -10,55 +11,50 @@ export default function Game() {
         jumpTo,
         moves,
         status,
-        visible
-    } = useTicTacToe();
-
+        visible,
+    } = useGame();
 
     return (
         <>
-            <main>
-                
-                <div className="game">
+            <div className="game">
 
-                    <div className="game-board">
+                <div className="game-board">
 
-                        <div className="status">{ status }</div>
+                    <div className="status">{ status }</div>
 
-                        <Board squares={squares} onPlay={play} />
-
-                    </div>
-
-                    {visible && (
-                        <div className="historyMoves">
-                            
-                            <h2>Historique des mouvements : </h2>
-
-                            <div className="list">
-
-                                <ol className="listHistoryMoves">
-
-                                    {moves
-                                        .filter(({ move }) => move !== 0)
-                                        .map(({ move, label }) => (
-
-                                            <li key={move} className="elementMoves">
-
-                                                <button className="buttonMoves" onClick={() => jumpTo(move)}> {label} </button>
-
-                                            </li>
-                                        ))}
-                                </ol>
-
-                            </div>
-
-                            <button className="buttonMoves restartButton" onClick={() => jumpTo(0)}> Recommencer la partie </button>
-
-                        </div>
-                    )}
+                    <Board squares={squares} onPlay={play} />
 
                 </div>
 
-            </main>
+                {visible && (
+                    <div className="historyMoves">
+                        
+                        <h2>Historique des mouvements : </h2>
+
+                        <div className="list">
+
+                            <ol className="listHistoryMoves">
+
+                                {moves
+                                    .filter(({ move }) => move !== 0)
+                                    .map(({ move, label }) => (
+
+                                        <li key={move} className="elementMoves">
+
+                                            <button className="buttonMoves" onClick={() => jumpTo(move)}> {label} </button>
+
+                                        </li>
+                                    ))}
+                            </ol>
+
+                        </div>
+
+                        <button className="buttonMoves restartButton" onClick={() => jumpTo(0)}> Recommencer la partie </button>
+
+                    </div>
+                )}
+
+            </div>
         </>
     );
 }

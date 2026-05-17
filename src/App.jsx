@@ -1,13 +1,20 @@
 import Header from "./components/Header";
-import Game from "./components/Game";
 import Footer from "./components/Footer";
+
+import AppRouter from "./routes/AppRouter";
+
+import { TicTacToeProvider } from "./context/TicTacToeContext";
 
 export default function App() {
     return (
-        <>
+        <TicTacToeProvider>
+
             <Header />
-            <Game />
+
+            <AppRouter />
+
             <Footer />
-        </>
+            
+        </TicTacToeProvider>
     );
 }

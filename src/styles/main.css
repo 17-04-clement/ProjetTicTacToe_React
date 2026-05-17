@@ -33,10 +33,145 @@ h2 {
 }
 
 main {
-	margin: 0px 30px;
-	border: 15px solid rgb(235, 70, 70);
+	display: flex;
+    margin: 0px 30px;
+    border: 15px solid rgb(235, 70, 70);
     border-radius: 40px;
     flex: 1;
+}
+
+.HomeMain {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linksToRoutesHomePage {
+	margin: 50px;
+    padding: 50px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+	border: 5px solid #c11717;
+	border-radius: 40px;
+	background-color: #313030;
+}
+
+.linkToRouteGame {
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	background-color: #0c86ff;
+	border-radius: 30px;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linkToRouteGame:hover {
+	background-color: #2e97ff;
+}
+
+.linkToRouteStats {
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	background-color: #ffc400;
+	border-radius: 30px;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+	
+.linkToRouteStats:hover {
+	background-color: rgb(255, 230, 1);
+}
+
+.linkToRouteAbout {
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	background-color: #36ee46;
+	border-radius: 30px;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linkToRouteAbout:hover {
+	background-color: #11fa09;
+}
+
+.AboutMain {
+	display: flex;
+	flex: 1;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.AboutSection {
+	margin: 30px 80px;
+    padding: 20px;
+	border: 5px solid white;
+	border-radius: 40px;
+	background-color: #313030;
+}
+
+.texteP {
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 1.5;
+}
+
+.linkToRouteHome {
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    font-weight: bold;
+    color: black;
+    background-color: #ff1d1dba;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linkToRouteHome:hover {
+	background-color: #ff1d1d;
+}
+
+.StatsMain {
+	display: flex;
+	flex: 1;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.StatsSection {
+	margin: 30px 50px;
+	padding: 20px;
+	border: 5px solid white;
+	border-radius: 40px;
+	background-color: #313030;
+}
+
+.GameMain {
+	display: flex;
+	flex: 1;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .headerGameTicTacToe {
@@ -59,6 +194,12 @@ main {
 	margin: 5px 10px 5px 10px;
 	font-size: 15px;
 	font-weight: bold;
+}
+
+.textP {
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 1.5;
 }
 
 .game {
@@ -159,12 +300,13 @@ main {
 }
 
 .restartButton {
-	display: block;
-	margin: 40px auto 20px auto;
-	background-color: #36ee46;
-	color: #111;
-	font-weight: 700;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 40px auto 20px auto;
+	padding: 20px 20px;
+    background-color: #36ee46;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .restartButton:hover {
