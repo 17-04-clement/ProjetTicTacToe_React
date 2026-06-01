@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import calculateWinner from "../utils/calculateWinner";
 
-export default function useTicTacToe() {
+export function useTicTacToe() {
 
     const [countXWins, setCountXWins] = useState(0);
     const [countOWins, setCountOWins] = useState(0);
@@ -26,17 +26,18 @@ export default function useTicTacToe() {
         status = "C'est au joueur " + (xIsNext ? "X" : "O") + " de jouer :";
     }
 
-    // Affiche l'historique quand la partie est terminée
+    // Affiche l'historique quand la partie est terminée et met à jour les compteurs de victoires et de matchs nuls
     useEffect(() => {
         if (winner || isDraw) {
             setVisible(true);
-            setGamePlayed(gamePlayed + 1);
+            setGamePlayed(prev => prev + 1);
+
             if (winner === "X") {
-                setCountXWins(countXWins + 1);
+                setCountXWins(prev => prev + 1);
             } else if (winner === "O") {
-                setCountOWins(countOWins + 1);
+                setCountOWins(prev => prev + 1);
             } else {
-                setCountDraws(countDraws + 1);
+                setCountDraws(prev => prev + 1);
             }
         }
     }, [winner, isDraw]);

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { useGame } from "../context/TicTacToeContext";
+import { useGame } from "../context/useGame";
 
 export default function StatsPage() {
 

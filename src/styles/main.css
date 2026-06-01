@@ -20,23 +20,24 @@ display: flex;
 }
 
 h1 {
-    font-size: 2.5em;
+    text-align: center;
     font-weight: bold;
-    padding: 8px;
+    margin: 10px 0px;
+    font-size: 28px;
 }
 
 h2 {
 	text-align: center;
-	font-size: 1.5em;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	font-size: 25px;
 }
 
 main {
 	display: flex;
-    margin: 0px 30px;
+    margin: 0px 5px;
     border: 15px solid rgb(235, 70, 70);
-    border-radius: 40px;
+    border-radius: 30px;
     flex: 1;
 }
 
@@ -50,25 +51,25 @@ main {
 }
 
 .linksToRoutesHomePage {
-	margin: 50px;
-    padding: 50px;
+	margin: 30px 10px;
+    padding: 30px 40px;
     gap: 50px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-	border: 5px solid #c11717;
-	border-radius: 40px;
-	background-color: #313030;
+    border: 5px solid #c11717;
+    border-radius: 40px;
+    background-color: #313030;
 }
 
 .linkToRouteGame {
 	display: inline-block;
-	padding: 20px 40px;
-	font-size: 24px;
+	padding: 25px 10px;
+	font-size: 20px;
 	font-weight: bold;
 	color: black;
 	background-color: #0c86ff;
-	border-radius: 30px;
+	border-radius: 40px;
 	text-decoration: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -79,12 +80,12 @@ main {
 
 .linkToRouteStats {
 	display: inline-block;
-	padding: 20px 40px;
-	font-size: 24px;
+	padding: 25px 10px;
+    font-size: 20px;
 	font-weight: bold;
 	color: black;
 	background-color: #ffc400;
-	border-radius: 30px;
+	border-radius: 40px;
 	text-decoration: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -95,12 +96,12 @@ main {
 
 .linkToRouteAbout {
 	display: inline-block;
-	padding: 20px 40px;
-	font-size: 24px;
+	padding: 25px 10px;
+	font-size: 20px;
 	font-weight: bold;
 	color: black;
 	background-color: #36ee46;
-	border-radius: 30px;
+	border-radius: 40px;
 	text-decoration: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -114,32 +115,31 @@ main {
 	flex: 1;
 	text-align: center;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
 .AboutSection {
-	margin: 30px 80px;
+	margin: 20px 20px;
     padding: 20px;
 	border: 5px solid white;
 	border-radius: 40px;
 	background-color: #313030;
 }
 
-.texteP {
-	margin-bottom: 30px;
+.textP {
 	font-size: 18px;
 	font-weight: lighter;
 	line-height: 1.5;
 }
 
 .linkToRouteHome {
-    margin-bottom: 20px;
-    padding: 20px 40px;
+    margin: 20px;
+    padding: 20px 35px;
     font-weight: bold;
     color: black;
     background-color: #ff1d1dba;
-    border-radius: 30px;
+    border-radius: 15px;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -153,16 +153,16 @@ main {
 	flex: 1;
 	text-align: center;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
 .StatsSection {
-	margin: 30px 50px;
-	padding: 20px;
-	border: 5px solid white;
-	border-radius: 40px;
-	background-color: #313030;
+    margin: 20px 15px;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 30px;
+    background-color: #313030;
 }
 
 .GameMain {
@@ -170,7 +170,7 @@ main {
 	flex: 1;
 	text-align: center;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -196,34 +196,27 @@ main {
 	font-weight: bold;
 }
 
-.textP {
-	font-size: 18px;
-	font-weight: lighter;
-	line-height: 1.5;
-}
 
 .game {
     display: flex;
-    margin: 10px;
-    padding: 30px;
+    padding: 10px;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
 .board{
-	border: 5px solid #414040;
-	border-radius: 16px;
+	border: 8px solid #414040;
+	border-radius: 15px;
 }
 
 .board-row {
 	display: grid;
-	grid-template-columns: repeat(3, min(30vw, 100px));
+	grid-template-columns: repeat(3, min(90px, 90px));
 	justify-content: center;
 }
 
 .game-board{
-	margin: 20px;
 	display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,13 +227,13 @@ main {
 }
 
 .square {
-	height: 100px;
-	width: 100px;
-	line-height: 100px;
-	font-size: 80px;
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    font-size: 60px;
 	font-weight: bold;
 	text-align: center;
-	border: 5px solid #414040;
+	border: 2px solid #414040;
 	background: #fff;
 }
 
@@ -253,20 +246,20 @@ main {
 
 .listHistoryMoves {
 	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	background: rgba(0, 0, 0, 0.15);
-	border-radius: 16px;
-	overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .list {
 	border: 5px solid rgba(141, 197, 235, 0.8);
-	border-radius: 16px;
+	border-radius: 15px;
 }
 
 .elementMoves {
-	padding: 16px 16px;
+	padding: 10px 10px;
 	border-bottom: 3px solid rgba(141, 197, 235, 0.8);
 	border-right: 3px solid rgba(141, 197, 235, 0.8);
 	background: rgba(255, 255, 255, 0.08);
@@ -290,10 +283,10 @@ main {
 }
 
 .buttonMoves {
-	padding: 10px 25px;
-	font-size: 16px;
+	padding: 10px 10px;
+	font-size: 15px;
 	border: none;
-	border-radius: 8px;
+	border-radius: 15px;
 	background-color: #2392db;
 	color: black;
 	cursor: pointer;
@@ -301,10 +294,10 @@ main {
 
 .restartButton {
     display: block;
-    margin: 40px auto 20px auto;
+    margin: 40px auto 5px auto;
 	padding: 20px 20px;
     background-color: #36ee46;
-    border-radius: 30px;
+    border-radius: 15px;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
